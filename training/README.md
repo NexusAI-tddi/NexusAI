@@ -1,10 +1,10 @@
-# 🤖 How to Train This Model Using Axolotl
+# 🤖 Bu Modeli Axolotl Kullanarak Nasıl Eğitebilirsiniz?
 
 <img src="https://github.com/user-attachments/assets/a8d0c95f-6268-42b9-93a4-ffea3c4e5987" alt="axolotl" width="140">
 
-You need to set up the [Axolotl](https://github.com/axolotl-ai-cloud/axolotl) framework to start the training.
+Eğitime başlamak için [Axolotl](https://github.com/axolotl-ai-cloud/axolotl) framework'ünü kurmanız gerekmektedir.
 
-Follow the steps taken from [Axolotl](https://github.com/axolotl-ai-cloud/axolotl) repostiry here:
+[Axolotl](https://github.com/axolotl-ai-cloud/axolotl) repo'sundan alınan adımları takip edin:
 
 ```bash
 git clone https://github.com/axolotl-ai-cloud/axolotl
@@ -14,17 +14,18 @@ pip3 install packaging ninja
 pip3 install -e '.[flash-attn,deepspeed]'
 ```
 
-For more details about set up: [Axolotl - Quickstart](https://github.com/axolotl-ai-cloud/axolotl?search=1#quickstart-)
+Kurulum hakkında daha fazla bilgi için: [Axolotl - Quickstart](https://github.com/axolotl-ai-cloud/axolotl?search=1#quickstart-)
 
-# ⚙️ Use Our Config
+# ⚙️ Yapılandırmamızı Kullanın
 
-Head to the [`nexus-qwen2-72b-instruct-orca.yaml`](https://github.com/NexusAI-tddi/NexusAI-tddi/blob/main/train/nexus-qwen2-72b-instruct-orca.yaml) file and download our YAML config.
+[nexus-qwen2-72b-instruct-orca.yaml](https://github.com/NexusAI-tddi/NexusAI-tddi/blob/main/train/nexus-qwen2-72b-instruct-orca.yaml) dosyasına gidin ve YAML dosyamızı indirin.
 
-Adjust the hyperparameters and other variables based on your setup and needs!
+Kendi kurulumunuza ve ihtiyaçlarınıza göre hiperparametreleri ve diğer değişkenleri ayarlayın!
 
-# 🖥️ Train the Model
+# 🖥️ Modeli Eğitin
 
-You can start the training with the following code:
+Eğitime aşağıdaki kodla başlayabilirsiniz:
+
 ```bash
 accelerate launch -m axolotl.cli.train nexus-qwen2-72b-instruct-orca.yaml
 ```
