@@ -99,3 +99,7 @@ Sohbet tabanlı bu arayüzde, metin ve görsel girişler kolaylıkla yapılabilm
 - **Gradio Framework**: Arayüzümüz geliştirilirken, Python tabanlı Gradio framework'ü kullanılmıştır. [Gradio PyPI](https://pypi.org/project/gradio/)
 
 Demo ile ilgili daha fazla bilgi için [`demo-app`](https://github.com/NexusAI-tddi/NexusAI-tddi/tree/main/demo-app) klasörüne bakabilirsiniz.
+
+## Demo Videosu
+
+![](https://github.com/user-attachments/assets/3dc484a7-2af1-4df6-a0b5-ff69f5a9166f)
