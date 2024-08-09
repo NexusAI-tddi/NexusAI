@@ -6,11 +6,14 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from transformers import BertTokenizer, BertModel
 from googletrans import Translator
+
 translator = Translator()
+
 eval = load_dataset("mlfoundations/VisIT-Bench")
 moondream = load_dataset("Q-bert/moondreamv2-out")
 vllm = load_dataset("Q-bert/vllm-out")
 z = load_dataset("Q-bert/vllm-out2")
+
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 model = BertModel.from_pretrained("bert-base-uncased").cuda()
 
@@ -25,13 +28,13 @@ def encode(lst):
     with torch.no_grad():
         outputs = model(**encoded_texts)
     return outputs.last_hidden_state[:, -1, :].detach().cpu().numpy()
+
+
 n = len(vllm)
 a = encode(gpt4[:n])
 b = encode(answer[:n])
 c = encode(mondrm[:n])
 d = encode(vllm[:n])
-
-
 
 def average_cosine_similarity(x, y):
     sim = 0
