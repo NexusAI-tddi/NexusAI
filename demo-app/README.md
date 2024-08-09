@@ -1,13 +1,13 @@
-# 🎥 Demo App
+# 🎥 Demo Uygulaması
 
-We host our demo app on Hugging Face Spaces and use Gradio as our Framework.
+Demo uygulamamızı Hugging Face Spaces üzerinde barındırıyoruz ve Gradio'yu Framework olarak kullanıyoruz.
 
-You can copy these files to your space to set up Hugging Face Spaces:
+Hugging Face Spaces'i kurmak için bu dosyaları alanınıza kopyalayabilirsiniz:
 
-- `app.py`: The main app file to run this demo.
-- `requirements.txt`: A text file that includes the required packages.
-- `README-hf-spaces.md`: Rename this file to `README.md`. It includes the metadata for Hugging Face Spaces.
+- `app.py`: Bu demo uygulamasını çalıştırmak için ana uygulama dosyası.
+- `requirements.txt`: Gerekli paketleri içeren bir metin dosyası.
+- `README-hf-spaces.md`: Bu dosyanın adını `README.md` olarak değiştirin. Hugging Face Spaces için gerekli olan metadata'yı içerir.
 
-# 🖼️ Screenshot
+# 🖼️ Ekran Görüntüsü
 
 ![image](https://github.com/user-attachments/assets/807ed4ca-0ec3-482e-8fef-ae43a43ce722)
