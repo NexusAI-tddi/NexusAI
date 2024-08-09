@@ -102,4 +102,4 @@ Demo ile ilgili daha fazla bilgi için [`demo-app`](https://github.com/NexusAI-t
 
 ## Demo Videosu
 
-![](https://github.com/user-attachments/assets/3dc484a7-2af1-4df6-a0b5-ff69f5a9166f)
+https://github.com/user-attachments/assets/3dc484a7-2af1-4df6-a0b5-ff69f5a9166f
