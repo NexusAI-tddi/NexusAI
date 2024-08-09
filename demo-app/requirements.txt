@@ -1,0 +1,9 @@
+torch
+transformers == 4.41.2
+spaces
+pillow
+accelerate
+ultralytics
+googletrans==4.0.0-rc1
+opencv-python
+einops

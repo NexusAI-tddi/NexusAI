@@ -1,0 +1,81 @@
+base_model: Qwen/Qwen2-72B-Instruct
+model_type: AutoModelForCausalLM
+tokenizer_type: AutoTokenizer
+
+load_in_8bit: false
+load_in_4bit: true
+strict: false
+
+chat_template: chatml
+datasets:
+  - path: orca-tr-1million-sharegpt-real.json
+    ds_type: json
+    type: sharegpt
+    conversation: chatml
+
+dataset_prepared_path: last_run_prepared
+val_set_size: 0
+output_dir: ./nexus-qwen2-72b-instruct-orca-model
+
+sequence_len: 8192
+sample_packing: true
+pad_to_sequence_len: true
+eval_sample_packing: false
+
+adapter: qlora
+lora_model_dir:
+lora_r: 32
+lora_alpha: 16
+lora_dropout: 0.05
+lora_target_linear: true
+lora_fan_in_fan_out:
+lora_modules_to_save: 
+  - "embed_tokens"
+  - "lm_head"
+
+wandb_project:
+wandb_entity:
+wandb_watch:
+wandb_name:
+wandb_log_model:
+
+save_safetensors: true
+
+gradient_accumulation_steps: 4 # change this based on vram, this number is only reference  - NexusAI
+micro_batch_size: 1 # change this based on vram, this number is only reference  - NexusAI
+num_epochs: 1
+optimizer: adamw_bnb_8bit
+lr_scheduler: cosine
+learning_rate: 0.0002
+
+train_on_inputs: false
+group_by_length: false
+bf16: true
+fp16: false
+tf32: false
+
+gradient_checkpointing: true
+early_stopping_patience:
+resume_from_checkpoint:
+local_rank:
+logging_steps: 1
+xformers_attention:
+flash_attention: true
+
+warmup_steps: 10
+evals_per_epoch: 0
+eval_table_size:
+eval_table_max_new_tokens: 128
+saves_per_epoch: 2
+debug:
+
+deepspeed: zero3_bf16_cpuoffload_params.json
+weight_decay: 0.0
+fsdp:
+fsdp_config:
+special_tokens:
+  bos_token: "<s>"
+  eos_token: "<|im_end|>"
+  unk_token: "<unk>"
+tokens:
+  - "<|im_start|>"
